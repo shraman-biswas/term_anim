@@ -1,7 +1,7 @@
 Terminal Animation
 ==================
 
-Some fun terminal animations done in C.
+Some fun terminal animations.
 Choose between a progress bar or a throwing stick.
 
 usage: ./main choice  
