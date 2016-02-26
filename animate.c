@@ -4,7 +4,7 @@
 void progress_bar(const int len)
 {
 	int i;
-	char *disp;
+	char *disp=NULL;
 	float tmp;
 	disp = (char *)calloc(len + 1, sizeof(char)); /* setup display memory */
 	memset(disp, ' ', len + 1);					/* clear display */
