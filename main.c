@@ -4,9 +4,11 @@ int main(int argc, char **argv)
 {
 	printf("[ terminal animation ]\n");
 
+	int choice, len;
+
 	/* get parameters */
-	const int choice = (argc == 2) ? atoi(argv[1]) : 2;
-	const int len = (argc == 3) ? atoi(argv[0]) : 50;
+	choice = (argc == 2) ? atoi(argv[1]) : 2;
+	len = (argc == 3) ? atoi(argv[0]) : 50;
 
 	/* start animation */
 	animate(choice, len);
@@ -14,7 +16,7 @@ int main(int argc, char **argv)
 	return EXIT_SUCCESS;
 }
 
-/* start progress bar animation if choice 1 
+/* start progress bar animation if choice 1
    or start throwing stick animation if choice 2 */
 void animate(const int type, const int len)
 {
@@ -28,7 +30,7 @@ void animate(const int type, const int len)
 			i = (i+1) % 2;
 		}
 	} else {
-		fprintf(stderr, "choice must be 1 (progress bar) or 2 (throwing stick)\n");
+		perror("choice must be 1 (progress bar) or 2 (throwing stick)");
 		exit(EXIT_FAILURE);
 	}
 }
