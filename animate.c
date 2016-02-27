@@ -51,7 +51,7 @@ void throwing_stick(const int len, const char dir, const int loop)
 		fflush(stdout);
 		usleep(MS(50));
 	}
-	if (!loop)
+	if (loop != 0)
 		printf("\n");
 	free(disp);
 }
