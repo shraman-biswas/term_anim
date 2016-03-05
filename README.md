@@ -1,9 +1,9 @@
 Terminal Animation
 ==================
 
-Some fun terminal animations.
-Choose between a progress bar or a throwing stick.
+Some fun dynamic terminal animations.
+Choose between a dynamic progress bar or an animated throwing stick.
 
-usage: ./main choice  
+Usage: ./main type  
 &nbsp;&nbsp;
-choice: 1 (progress bar), 2 (throwing stick)
+type: animation type (1=progress bar, 2=throwing stick)
