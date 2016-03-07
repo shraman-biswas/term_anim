@@ -1,5 +1,8 @@
 #include "main.h"
 
+/* function prototypes */
+static void animate(const int type, const int len);
+
 int main(int argc, char **argv)
 {
 	printf("[ terminal animation ]\n");
@@ -18,7 +21,7 @@ int main(int argc, char **argv)
 
 /* start progress bar animation if choice 1
    or start throwing stick animation if choice 2 */
-void animate(const int type, const int len)
+static void animate(const int type, const int len)
 {
 	if (type == 1) {
 		progress_bar(len);
@@ -30,7 +33,7 @@ void animate(const int type, const int len)
 			i = (i+1) % 2;
 		}
 	} else {
-		perror("choice must be 1 (progress bar) or 2 (throwing stick)");
+		fprintf(stderr, "choice must be 1 (progress bar) or 2 (throwing stick)\n");
 		exit(EXIT_FAILURE);
 	}
 }
